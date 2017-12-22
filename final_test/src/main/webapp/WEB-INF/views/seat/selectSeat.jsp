@@ -13,7 +13,8 @@
 <script type="text/javascript">
 	$(function(){
 		var count=0;
-		/* 남은좌석 관련해서 추가 할 것 */
+		/* 남은좌석 관련해서 추가 할 것  숫자*/
+		/* 이미 판매된 좌석 관련해서도 작업할것 */
 		/* 좌석 배치도 열 이름 출력 하는 부분 */
 		$(".row").each(function(){
 			var row=Number($(this).attr("title"));
@@ -45,7 +46,7 @@
 		});
 		/* 결제 API 부분 */
 		$("#btn").click(function(){
-			if(count==${ticket}){
+			if(count=='${ticket}'){
 				var IMP = window.IMP; /*생략가능 */
 				IMP.init('imp95781276');/* 가맹점 식별 코드 변경하지 마세요.*/
 				
